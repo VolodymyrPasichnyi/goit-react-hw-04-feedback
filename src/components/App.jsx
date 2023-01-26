@@ -11,8 +11,16 @@ export const App = () => {
     const [bad, setBad] = useState(0)
 
     const countClick = e => {
-        const click = e.target.innerText.toLowerCase()
-        setGood(prevState => { return {[click]: prevState[click] + 1 }})
+        const click = e.target.textContent
+        if (click === 'Good') {
+            setGood(prev => prev + 1)
+        }
+        if (click === 'Neutral') {
+            setNeutral(prev => prev + 1)
+        }
+        if (click === 'Bad') {
+            setBad(prev => prev + 1)
+        }
     }
 
     const countTotalFeedback = () => (good + neutral + bad)
