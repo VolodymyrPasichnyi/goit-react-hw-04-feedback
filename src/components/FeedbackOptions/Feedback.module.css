@@ -1,0 +1,13 @@
+.div {
+    text-align: center;
+}
+
+.buttons {
+    width: 100px;
+    height: 35px;
+    margin: auto 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: aliceblue;
+    cursor: pointer;
+}
